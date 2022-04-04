@@ -5,12 +5,23 @@ const icon = document.querySelector('.weather_card_details_icon');
 const dateHolder = document.querySelector('.weather_card_today');
 const timeHolder = document.querySelector('.weather_card_clock');
 
+const city = localStorage.getItem('city');
+       // console.log(city);
+window.addEventListener('load',async()=>{
+    if(city){
+        const cityDetails = await searchCity(city);
+        const weatherData = await getWeather(cityDetails.Key);
+        updateHTML(cityDetails, weatherData);
+    }
+});
 
 form.addEventListener('submit',async e =>{
     e.preventDefault();
     // console.log(cityInput.value);
     if(cityInput.value !== ""){
         const cityDetails = await searchCity(cityInput.value.trim().toLowerCase());
+        //save to localStorage
+        localStorage.setItem('city',cityInput.value);
         const weatherData = await getWeather(cityDetails.Key);
         updateHTML(cityDetails, weatherData);
         form.reset();
