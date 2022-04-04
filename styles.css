@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Roboto+Serif:wght@300;400;500;600&display=swap');
+/*css reset*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/*end of css reset*/
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+}
+
+.main{
+   display: grid;
+   grid-template-columns: minmax(6rem,1fr) 30vw minmax(6rem,1fr);
+   grid-template-rows: repeat(3, 1fr); 
+}
+
+.container{
+    margin-top: 9rem;
+    margin-top: 5rem;
+    grid-column: 2/3;
+    border: .1rem solid rgba(64, 64, 65, .5);
+    border-radius: 2rem;
+    box-shadow: 2rem 2rem 10px #888;
+}
+
+.weather_card{
+    padding: 2rem;
+}
+
+h1.weather-heading{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.weather_card_bg{
+    height: 20rem;
+    width: 100%;
+    background-color: rgb(204, 209, 212);
+    border: 1px dashed rgb(198 198 205);
+    display: grid;
+    grid-template-columns: minmax(6rem,1fr) 50% minmax(6rem,1fr);
+    grid-template-rows: repeat(5, 1fr);
+    border-radius: 2rem;
+}
+
+.weather_form_label{
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1rem;
+    grid-column: 1/-1;
+}
+
+.dateNtime{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 1/-1;
+    grid-row: 2/3;
+}
+
+.weather_card_details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.hidden{
+    display: none;
+}
+
+.weather_card_details div{
+    margin-bottom:1rem;
+}
+
+.weather_card_details_icon{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    transform: translate(0%, -50%);
+    background-color: darkseagreen;
+}
+
+.weather_card_today{
+    grid-column: 2/3;
+    grid-row:2/3;
+}
+
+.weather_form{
+    padding: 1rem;
+    font-size: 1.8rem;
+    grid-column: 1/-1;
+    grid-row:3/4;
+    text-align: center;
+}
+
+.weather_form label{
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.weather_card_input:focus{
+    outline: none;
+}
+
+.weather_card_input{
+    padding: 1rem;
+    font-size: 1.8rem;
+    border-radius: 1rem;
+    outline: none;
+    border:none;
+    box-shadow: .1rem .1rem 10px #888;
+    background-color: rgb(38, 41, 40);
+    color:#fff;
+}
+
+.weather_card_details_city{
+    font-size: 2.3rem;
+    font-weight: 600;
+    font-family: 'Roboto Serif', serif;
+}
+
+.weather_card_details_weatherText{
+    font-family: 'Roboto Serif', serif;
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+
+
+.weather_card_details_temp{
+    font-size: 2.2rem;
+    font-weight: 600;
+    font-family: 'Roboto Serif', serif;
+}
+
+

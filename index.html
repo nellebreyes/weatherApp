@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <section class="weather">
+                
+                <div class="weather_card">
+                    <h1 class="weather-heading"> Today's Weather</h1>
+                    <div class="weather_card_bg">
+                        <div class="dateNtime">
+                            <div class="weather_card_today"> </div>
+                            <div class="weather_card_clock"> </div>
+                        </div>
+                        <form name="weather_form" class="weather_form">
+                            <label class="weather_form_label">Check weather forecast by City.</label>
+                            <input class="weather_card_input" type="text" placeholder="Enter the city name here">
+                        </form>
+                    </div>
+                    <div class="weather_card_details hidden">
+                        <img src="images/icons/38.svg" class="weather_card_details_icon" >
+                        <div class="weather_card_details_city"></div>
+                        <div class="weather_card_details_weatherText"></div>
+                        <div class="weather_card_details_temp">&deg;</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="js/forecast.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
